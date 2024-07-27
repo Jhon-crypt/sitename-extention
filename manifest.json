@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Site Name Display",
+  "version": "1.0",
+  "description": "Displays the name of the current site",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
