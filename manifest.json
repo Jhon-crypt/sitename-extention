@@ -1,10 +1,22 @@
 {
-  "manifest_version": 3,
-  "name": "Site Name Display",
-  "version": "1.0",
-  "description": "Displays the name of the current site",
-  "permissions": ["activeTab"],
-  "action": {
-    "default_popup": "popup.html"
+    "manifest_version": 3,
+    "name": "Text Reader",
+    "version": "1.0",
+    "description": "A Chrome extension to read text from a site.",
+    "permissions": [
+      "activeTab"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
   }
-}
+  
